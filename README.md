@@ -1,11 +1,5 @@
-# gatsby-starter-blog
-Gatsby starter for creating a blog
+# blog
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+My personal blog. Created using [Gatsby.js](https://www.gatsbyjs.org/) and [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)
 
-`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
-
-Or [view the live demo here](https://gatsby-starter-blog-demo.netlify.com/).
-
-## Running in development
-`gatsby develop`
+[View the live site](https://mvasigh.netlify.com).
