@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
+import ContentStyles from '../components/styles/ContentStyles';
 
 class BlogPostTemplate extends React.Component {
     render() {
@@ -19,14 +20,11 @@ class BlogPostTemplate extends React.Component {
                     meta={[{ name: 'description', content: siteDescription }]}
                     title={`${post.frontmatter.title} | ${siteTitle}`}
                 />
-                <h1>{post.frontmatter.title}</h1>
-                <p>{post.frontmatter.date}</p>
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                <hr
-                    style={{
-                        marginBottom: rhythm(1)
-                    }}
-                />
+                <ContentStyles>
+                    <h2 className="title">{post.frontmatter.title}</h2>
+                    <p className="date">{post.frontmatter.date}</p>
+                    <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                </ContentStyles>
                 <Bio />
 
                 <ul
