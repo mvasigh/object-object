@@ -1,22 +1,36 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import theme from './styles/Theme';
 import Container from './styles/Container';
 import Header from './Header';
 
-// *** Snippet from existing file:
-// ---
-// const rootPath = `${__PATH_PREFIX__}/`;
-// let header;
-// if (location.pathname === rootPath) {
+import 'typeface-ibm-plex-mono';
+import 'typeface-ibm-plex-sans';
+
+const GlobalStyle = createGlobalStyle`
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html {
+        background-color: ${({ theme }) => theme.white}
+    }
+`;
 
 class Layout extends React.Component {
     render() {
         const { title, children } = this.props;
         return (
-            <Container>
-                <Header title={title} />
-                {children}
-            </Container>
+            <ThemeProvider theme={theme}>
+                <Container>
+                    <GlobalStyle />
+                    <Header title={title} />
+                    {children}
+                </Container>
+            </ThemeProvider>
         );
     }
 }

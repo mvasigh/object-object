@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import 'typeface-ibm-plex-mono';
-
 const HeaderStyles = styled.header`
-    padding: 1.2rem 0.8rem;
-    .title {
+    padding: 1.8rem 0;
+    .title,
+    .title:active {
+        text-decoration: none;
         font-family: 'IBM Plex Mono', monospace;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 2.2rem;
+        letter-spacing: -1px;
+        color: ${({ theme }) => theme.accent};
     }
 `;
 
@@ -18,7 +20,9 @@ class Header extends Component {
         const { title } = this.props;
         return (
             <HeaderStyles>
-                <div className="title">{title}</div>
+                <Link className="title" to="/">
+                    {title}
+                </Link>
             </HeaderStyles>
         );
     }
