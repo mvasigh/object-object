@@ -1,74 +1,62 @@
 import React from 'react';
-
-// Import typefaces
-import 'typeface-montserrat';
-import 'typeface-merriweather';
-import 'typeface-oswald';
-
+import styled from 'styled-components';
 import avatar from './avatar.jpg';
-import { rhythm } from '../utils/typography';
+
+const Avatar = styled.img`
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 10px;
+`;
+
+const BioStyles = styled.div`
+    display: flex;
+    flex-direction: row;
+    padding: 0.8rem 0;
+    *:not(:last-child) {
+        margin-right: 0.8rem;
+    }
+`;
 
 class Bio extends React.Component {
-  render() {
-    const bioLinks = [
-      {
-        label: 'Website',
-        href: 'https://mvasigh.github.io'
-      },
-      {
-        label: 'Github',
-        href: 'https://github.com/mvasigh'
-      },
-      {
-        label: 'Codepen',
-        href: 'https://codepen.io/vasighm/'
-      },
-      {
-        label: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/mehdi-vasigh/'
-      }
-    ];
+    render() {
+        const bioLinks = [
+            {
+                label: 'Website',
+                href: 'https://mvasigh.github.io'
+            },
+            {
+                label: 'Github',
+                href: 'https://github.com/mvasigh'
+            },
+            {
+                label: 'Codepen',
+                href: 'https://codepen.io/vasighm/'
+            },
+            {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/mehdi-vasigh/'
+            }
+        ];
 
-    return (
-      <div
-        style={{
-          display: 'flex',
-          marginBottom: rhythm(2.5)
-        }}
-      >
-        <img
-          src={avatar}
-          alt={`Mehdi Vasigh`}
-          style={{
-            marginRight: rhythm(1 / 2),
-            marginBottom: 0,
-            width: rhythm(2),
-            height: rhythm(2),
-            borderRadius: '4px'
-          }}
-        />
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'start'
-          }}
-        >
-          <span>
-            By <strong>Mehdi Vasigh</strong>, Software Developer living in
-            Houston, TX
-          </span>
-          <div>
-            {bioLinks.map(link => (
-              <a style={{ marginRight: '8px' }} href={link.href}>
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  }
+        return (
+            <BioStyles>
+                <Avatar src={avatar} alt={`Mehdi Vasigh`} />
+                <div>
+                    <span>
+                        By <strong>Mehdi Vasigh</strong>, Software Developer
+                        living in Houston, TX
+                    </span>
+                    <div>
+                        {bioLinks.map(link => (
+                            <a style={{ marginRight: '8px' }} href={link.href}>
+                                {link.label}
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </BioStyles>
+        );
+    }
 }
 
 export default Bio;
