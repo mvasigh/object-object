@@ -48,11 +48,11 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Gatsby Starter Blog`,
-                short_name: `GatsbyJS`,
+                name: `[object Object]`,
+                short_name: `[object Object]`,
                 start_url: `/`,
-                background_color: `#ffffff`,
-                theme_color: `#663399`,
+                background_color: `#E8E9EB`,
+                theme_color: `#EF476F`,
                 display: `minimal-ui`
             }
         },
