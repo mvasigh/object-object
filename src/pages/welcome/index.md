@@ -24,7 +24,31 @@ Nunc sit amet fringilla eros. Etiam a luctus nunc. Nulla id varius enim, quis da
 Nam porttitor sodales lectus. Duis aliquam fermentum elit, et pellentesque dui ullamcorper at. Pellentesque id egestas ante. Sed pulvinar nibh elit, eu molestie tellus pellentesque eu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in libero a diam pulvinar varius ac sed turpis. Nullam ac pellentesque massa. Suspendisse condimentum consequat magna, eu dapibus nulla efficitur sagittis.
 
 ```js
-const Component = props => {
-    return <div>Hello World</div>;
-};
+import React, { Component } from 'react'
+
+class Button extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            clicked: false;
+        }
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState({ clicked: true });
+    }
+
+    render() {
+        return (
+            <button onClick={this.handleClick}>Hello World</button>
+        )
+    }
+}
+
+export default Button;
 ```
+
+Nam porttitor sodales lectus. Duis aliquam fermentum elit, et pellentesque dui ullamcorper at. Pellentesque id egestas ante. Sed pulvinar nibh elit, eu molestie tellus pellentesque eu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in libero a diam pulvinar varius ac sed turpis. Nullam ac pellentesque massa. Suspendisse condimentum consequat magna, eu dapibus nulla efficitur sagittis.
+
+Nam porttitor sodales lectus. Duis aliquam fermentum elit, et pellentesque dui ullamcorper at. Pellentesque id egestas ante. Sed pulvinar nibh elit, eu molestie tellus pellentesque eu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in libero a diam pulvinar varius ac sed turpis. Nullam ac pellentesque massa. Suspendisse condimentum consequat magna, eu dapibus nulla efficitur sagittis.

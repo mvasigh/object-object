@@ -30,7 +30,12 @@ module.exports = {
                             wrapperStyle: `margin-bottom: 1.0725rem`
                         }
                     },
-                    'gatsby-remark-prismjs',
+                    {
+                        resolve: 'gatsby-remark-prismjs',
+                        options: {
+                            showLineNumbers: true
+                        }
+                    },
                     'gatsby-remark-copy-linked-files',
                     'gatsby-remark-smartypants'
                 ]
@@ -51,8 +56,8 @@ module.exports = {
                 name: `[object Object]`,
                 short_name: `[object Object]`,
                 start_url: `/`,
-                background_color: `#E8E9EB`,
-                theme_color: `#EF476F`,
+                background_color: `#f2507b`,
+                theme_color: `#f2507b`,
                 display: `minimal-ui`
             }
         },
