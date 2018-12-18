@@ -6,9 +6,10 @@ const BarStyles = styled.div`
     display: flex;
     flex-direction: row;
     height: 12px;
-    width: 60%;
+    width: 16rem;
+    max-width: 60%;
     justify-content: flex-end;
-    margin: 1.2rem 0 2.8rem;
+    margin: 1.2rem 0 2.1rem;
 `;
 
 const CellStyles = styled.div`
