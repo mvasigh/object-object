@@ -9,9 +9,9 @@ const HeaderStyles = styled.header`
         text-decoration: none;
         font-family: 'IBM Plex Mono', monospace;
         font-weight: 500;
-        font-size: 2.2rem;
+        font-size: 1.4rem;
         letter-spacing: -1px;
-        color: ${({ theme }) => theme.accent};
+        color: ${({ theme }) => theme.primary};
     }
 `;
 
