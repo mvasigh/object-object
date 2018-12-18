@@ -57,7 +57,7 @@ module.exports = {
                 short_name: `[object Object]`,
                 start_url: `/`,
                 background_color: `#f2507b`,
-                theme_color: `#f2507b`,
+                theme_color: `#392D3B`,
                 display: `minimal-ui`
             }
         },
