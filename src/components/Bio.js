@@ -1,19 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import avatar from './avatar.jpg';
 
-const Avatar = styled.img`
-    width: 4.8rem;
-    height: 4.8rem;
-    border-radius: 10px;
-`;
-
-const BioStyles = styled.div`
+const BioContainer = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 0.8rem 0;
     *:not(:last-child) {
         margin-right: 0.8rem;
+    }
+`;
+
+const BioBlurb = styled.div`
+    font-family: 'IBM Plex Mono', monospace;
+    strong {
+        color: ${({ theme }) => theme.shades['30']};
+    }
+`;
+
+const BioLinks = styled.div`
+    a {
+        margin-right: 8px;
     }
 `;
 
@@ -39,22 +46,19 @@ class Bio extends React.Component {
         ];
 
         return (
-            <BioStyles>
-                <Avatar src={avatar} alt={`Mehdi Vasigh`} />
-                <div>
-                    <span>
-                        By <strong>Mehdi Vasigh</strong>, Software Developer
-                        living in Houston, TX
-                    </span>
-                    <div>
-                        {bioLinks.map(link => (
-                            <a style={{ marginRight: '8px' }} href={link.href}>
-                                {link.label}
-                            </a>
-                        ))}
-                    </div>
-                </div>
-            </BioStyles>
+            <BioContainer>
+                <BioBlurb>
+                    <strong>Mehdi Vasigh</strong>, Full-Stack Developer based in
+                    Houston, TX
+                </BioBlurb>
+                <BioLinks>
+                    {bioLinks.map(link => (
+                        <a style={{ marginRight: '8px' }} href={link.href}>
+                            {link.label}
+                        </a>
+                    ))}
+                </BioLinks>
+            </BioContainer>
         );
     }
 }
