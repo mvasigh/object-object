@@ -18,6 +18,9 @@ const GlobalStyle = createGlobalStyle`
     html {
         background-color: ${({ theme }) => theme.white}
     }
+    body {
+        font-family: 'IBM Plex Sans', 'Roboto', sans-serif;
+    }
 `;
 
 class Layout extends React.Component {

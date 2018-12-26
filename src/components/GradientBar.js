@@ -18,8 +18,9 @@ const CellStyles = styled.div`
     width: 100%;
 `;
 
-const GradientBar = () => {
-    const colors = Object.values(theme.shades).reverse();
+const GradientBar = ({ reverse = false }) => {
+    const shades = Object.values(theme.shades);
+    const colors = reverse ? shades.reverse() : shades;
     // Colors from:  http://www.colorbox.io/ (Lock on theme primary color HEX)
     return (
         <BarStyles>
