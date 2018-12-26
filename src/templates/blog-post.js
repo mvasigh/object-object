@@ -6,6 +6,7 @@ import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import ContentStyles from '../components/styles/ContentStyles';
 import GradientBar from '../components/GradientBar';
+import Divider from '../components/styles/Divider';
 
 class BlogPostTemplate extends React.Component {
     render() {
@@ -24,9 +25,10 @@ class BlogPostTemplate extends React.Component {
                 <ContentStyles>
                     <h2 className="title">{post.frontmatter.title}</h2>
                     <p className="date">{post.frontmatter.date}</p>
-                    <GradientBar />
+                    <GradientBar reverse />
                     <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 </ContentStyles>
+                <Divider />
                 <Bio />
 
                 <ul
