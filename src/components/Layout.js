@@ -16,17 +16,19 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     html {
-        background-color: ${({ theme }) => theme.white}
+        background-color: ${({ theme }) => theme.white};
     }
     body {
         font-family: 'IBM Plex Sans', 'Roboto', sans-serif;
     }
     a,
     a:active {
-        color: ${({ theme }) => theme.shades['30']}
+        color: ${({ theme }) => theme.primary};
+        transition: 0.2s;
     }
     a:hover {
-        color: ${({ theme }) => theme.shades['40']}
+        color: ${({ theme }) => theme.primaryAccent};
+        transition: 0.2s;
     }
 `;
 

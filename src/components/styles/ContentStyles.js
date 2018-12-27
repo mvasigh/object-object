@@ -30,7 +30,8 @@ const ContentStyles = styled.div`
         font-size: 1.8rem;
         font-weight: 700;
         letter-spacing: -1px;
-        margin-bottom: 0.6rem;
+        line-height: 1.3;
+        margin-bottom: 0.4rem;
         color: ${({ theme }) => theme.dark};
     }
 
@@ -56,6 +57,8 @@ const ContentStyles = styled.div`
 
     pre {
         margin-bottom: 1.8rem;
+        font-size: 0.9rem;
+        border-radius: 0.3rem;
     }
 `;
 

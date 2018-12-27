@@ -25,7 +25,7 @@ const BioContainer = styled.div`
 const BioBlurb = styled.div`
     font-family: 'IBM Plex Sans', sans-serif;
     strong {
-        color: ${({ theme }) => theme.shades['30']};
+        color: ${({ theme }) => theme.primary};
     }
 `;
 

@@ -1,19 +1,21 @@
+// Themed using Lyft's ColorBox (http://www.colorbox.io/) 6-step output
+
 const theme = {
     black: '#212121',
-    primaryAccent: '#DF9986',
     dark: '#392D3B',
     darkAccent: '#8B8595',
     shades: {
-        '0': '#fffcfc',
-        '10': '#fb9cab',
-        '20': '#f2507b',
-        '30': '#e1217d',
-        '40': '#c7099f',
-        '50': '#9200a6'
+        '0': '#f2fffa',
+        '10': '#78f7cc',
+        '20': '#1be5a6',
+        '30': '#00c591',
+        '40': '#009276',
+        '50': '#005248'
     }
 };
 
-theme.primary = theme.shades['20'];
+theme.primary = theme.shades['40'];
+theme.primaryAccent = theme.shades['30'];
 theme.white = theme.shades['0'];
 
 export default theme;
