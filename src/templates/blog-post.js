@@ -28,9 +28,6 @@ class BlogPostTemplate extends React.Component {
                     <GradientBar reverse />
                     <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 </ContentStyles>
-                <Divider />
-                <Bio />
-
                 <ul
                     style={{
                         display: 'flex',
@@ -55,6 +52,8 @@ class BlogPostTemplate extends React.Component {
                         )}
                     </li>
                 </ul>
+                <Divider />
+                <Bio />
             </Layout>
         );
     }

@@ -21,6 +21,13 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'IBM Plex Sans', 'Roboto', sans-serif;
     }
+    a,
+    a:active {
+        color: ${({ theme }) => theme.shades['30']}
+    }
+    a:hover {
+        color: ${({ theme }) => theme.shades['40']}
+    }
 `;
 
 class Layout extends React.Component {

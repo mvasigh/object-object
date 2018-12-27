@@ -6,13 +6,24 @@ const BioContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding: 0.8rem 0;
+    margin: 1.6rem 0;
     *:not(:last-child) {
         margin-right: 0.8rem;
+    }
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        * {
+            text-align: center;
+        }
+        *:not(:last-child) {
+            margin-bottom: 1.6rem;
+        }
     }
 `;
 
 const BioBlurb = styled.div`
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'IBM Plex Sans', sans-serif;
     strong {
         color: ${({ theme }) => theme.shades['30']};
     }
@@ -52,8 +63,12 @@ class Bio extends React.Component {
                     Houston, TX
                 </BioBlurb>
                 <BioLinks>
-                    {bioLinks.map(link => (
-                        <a style={{ marginRight: '8px' }} href={link.href}>
+                    {bioLinks.map((link, i) => (
+                        <a
+                            key={i}
+                            style={{ marginRight: '8px' }}
+                            href={link.href}
+                        >
                             {link.label}
                         </a>
                     ))}

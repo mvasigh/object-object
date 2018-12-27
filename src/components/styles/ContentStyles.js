@@ -21,9 +21,15 @@ const ContentStyles = styled.div`
         color: ${({ theme }) => theme.primary};
     }
 
+    h2 a {
+        color: ${({ theme }) => theme.dark};
+        text-decoration: none;
+    }
+
     h2.title {
         font-size: 1.8rem;
         font-weight: 700;
+        letter-spacing: -1px;
         margin-bottom: 0.6rem;
         color: ${({ theme }) => theme.dark};
     }
@@ -45,8 +51,7 @@ const ContentStyles = styled.div`
 
     p.date {
         color: ${({ theme }) => theme.darkAccent};
-        padding-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 1.2rem;
     }
 
     pre {

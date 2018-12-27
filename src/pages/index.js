@@ -4,6 +4,8 @@ import Helmet from 'react-helmet';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
+import Divider from '../components/styles/Divider';
+import ContentStyles from '../components/styles/ContentStyles';
 
 class BlogIndex extends React.Component {
     render() {
@@ -19,28 +21,27 @@ class BlogIndex extends React.Component {
                     meta={[{ name: 'description', content: siteDescription }]}
                     title={siteTitle}
                 />
+                <ContentStyles>
+                    {posts.map(({ node }) => {
+                        const title =
+                            node.frontmatter.title || node.fields.slug;
+                        return (
+                            <div key={node.fields.slug}>
+                                <h2 className="title">
+                                    <Link to={node.fields.slug}>{title}</Link>
+                                </h2>
+                                <p className="date">{node.frontmatter.date}</p>
+                                <p
+                                    dangerouslySetInnerHTML={{
+                                        __html: node.excerpt
+                                    }}
+                                />
+                            </div>
+                        );
+                    })}
+                </ContentStyles>
+                <Divider />
                 <Bio />
-                {posts.map(({ node }) => {
-                    const title = node.frontmatter.title || node.fields.slug;
-                    return (
-                        <div key={node.fields.slug}>
-                            <h3>
-                                <Link
-                                    style={{ boxShadow: 'none' }}
-                                    to={node.fields.slug}
-                                >
-                                    {title}
-                                </Link>
-                            </h3>
-                            <small>{node.frontmatter.date}</small>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: node.excerpt
-                                }}
-                            />
-                        </div>
-                    );
-                })}
             </Layout>
         );
     }
