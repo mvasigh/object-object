@@ -16,7 +16,7 @@ const BioContainer = styled.div`
         * {
             text-align: center;
         }
-        *:not(:last-child) {
+        div:not(:last-child) {
             margin-bottom: 1.6rem;
         }
     }
@@ -32,6 +32,7 @@ const BioBlurb = styled.div`
 const BioLinks = styled.div`
     a {
         margin-right: 8px;
+        display: inline-block;
     }
 `;
 
