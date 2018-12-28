@@ -1,6 +1,7 @@
 ---
 title: Here is another post
 date: '2018-12-08T16:09:00.651Z'
+tags: [css, react, apollo, graphql]
 ---
 
 This is my very first post on my new blog! Here, I will be posting

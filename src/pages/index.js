@@ -6,6 +6,8 @@ import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import Divider from '../components/styles/Divider';
 import ContentStyles from '../components/styles/ContentStyles';
+import Tag from '../components/Tag';
+import TagList from '../components/TagList';
 
 class BlogIndex extends React.Component {
     render() {
@@ -31,6 +33,7 @@ class BlogIndex extends React.Component {
                                     <Link to={node.fields.slug}>{title}</Link>
                                 </h2>
                                 <p className="date">{node.frontmatter.date}</p>
+                                <TagList tags={node.frontmatter.tags} />
                                 <p
                                     dangerouslySetInnerHTML={{
                                         __html: node.excerpt
@@ -67,6 +70,7 @@ export const pageQuery = graphql`
                     frontmatter {
                         date(formatString: "MMMM DD, YYYY")
                         title
+                        tags
                     }
                 }
             }
