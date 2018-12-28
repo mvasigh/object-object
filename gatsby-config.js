@@ -56,8 +56,8 @@ module.exports = {
                 name: `[object Object]`,
                 short_name: `[object Object]`,
                 start_url: `/`,
-                background_color: `#f2507b`,
-                theme_color: `#392D3B`,
+                background_color: `#fafafa`,
+                theme_color: `#009276`,
                 display: `minimal-ui`
             }
         },
