@@ -1,12 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import ContentStyles from '../components/styles/ContentStyles';
 import GradientBar from '../components/GradientBar';
 import Divider from '../components/styles/Divider';
+import BottomNav from '../components/BottomNav';
 
 class BlogPostTemplate extends React.Component {
     render() {
@@ -28,30 +29,7 @@ class BlogPostTemplate extends React.Component {
                     <GradientBar reverse />
                     <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 </ContentStyles>
-                <ul
-                    style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'space-between',
-                        listStyle: 'none',
-                        padding: 0
-                    }}
-                >
-                    <li>
-                        {previous && (
-                            <Link to={previous.fields.slug} rel="prev">
-                                ← {previous.frontmatter.title}
-                            </Link>
-                        )}
-                    </li>
-                    <li>
-                        {next && (
-                            <Link to={next.fields.slug} rel="next">
-                                {next.frontmatter.title} →
-                            </Link>
-                        )}
-                    </li>
-                </ul>
+                <BottomNav previous={previous} next={next} />
                 <Divider />
                 <Bio />
             </Layout>
