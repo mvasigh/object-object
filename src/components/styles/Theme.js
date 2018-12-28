@@ -1,6 +1,7 @@
 // Themed using Lyft's ColorBox (http://www.colorbox.io/) 6-step output
 
 const theme = {
+    white: '#FAFAFA',
     black: '#212121',
     dark: '#392D3B',
     darkAccent: '#8B8595',
@@ -16,6 +17,5 @@ const theme = {
 
 theme.primary = theme.shades['40'];
 theme.primaryAccent = theme.shades['30'];
-theme.white = theme.shades['0'];
 
 export default theme;
