@@ -8,6 +8,7 @@ import ContentStyles from '../components/styles/ContentStyles';
 import GradientBar from '../components/GradientBar';
 import Divider from '../components/styles/Divider';
 import BottomNav from '../components/BottomNav';
+import TagList from '../components/TagList';
 
 class BlogPostTemplate extends React.Component {
     render() {
@@ -26,6 +27,10 @@ class BlogPostTemplate extends React.Component {
                 <ContentStyles>
                     <h2 className="title">{post.frontmatter.title}</h2>
                     <p className="date">{post.frontmatter.date}</p>
+                    {/* {post.frontmatter.tags.map(tag => (
+                        <Tag text={tag} />
+                    ))} */}
+                    <TagList tags={post.frontmatter.tags} />
                     <GradientBar reverse />
                     <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 </ContentStyles>
@@ -54,6 +59,7 @@ export const pageQuery = graphql`
             frontmatter {
                 title
                 date(formatString: "MMMM DD, YYYY")
+                tags
             }
         }
     }

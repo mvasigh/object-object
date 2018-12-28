@@ -52,7 +52,7 @@ const ContentStyles = styled.div`
 
     p.date {
         color: ${({ theme }) => theme.darkAccent};
-        margin-bottom: 1.2rem;
+        margin-bottom: 0.8rem;
     }
 
     pre {
