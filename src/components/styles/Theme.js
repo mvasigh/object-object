@@ -6,7 +6,6 @@ const theme = {
     dark: '#392D3B',
     darkAccent: '#8B8595',
     shades: {
-        '0': '#f2fffa',
         '10': '#78f7cc',
         '20': '#1be5a6',
         '30': '#00c591',
