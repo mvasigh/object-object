@@ -13,14 +13,16 @@ const TagListStyles = styled.ul`
     }
 `;
 
-const TagList = ({ tags }) => (
-    <TagListStyles>
-        {tags.map((tag, i) => (
-            <li key={i}>
-                <Tag text={tag} />
-            </li>
-        ))}
-    </TagListStyles>
-);
+const TagList = ({ tags, onTagClick }) => {
+    return (
+        <TagListStyles>
+            {tags.map((tag, i) => (
+                <li key={i}>
+                    <Tag role="link" onTagClick={onTagClick} text={tag} />
+                </li>
+            ))}
+        </TagListStyles>
+    );
+};
 
 export default TagList;

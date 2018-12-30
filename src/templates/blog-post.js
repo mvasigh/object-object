@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
+import { graphql, navigate } from 'gatsby';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
@@ -11,6 +11,15 @@ import BottomNav from '../components/BottomNav';
 import TagList from '../components/TagList';
 
 class BlogPostTemplate extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleTagClick = this.handleTagClick.bind(this);
+    }
+
+    handleTagClick(tag) {
+        navigate('/', { state: { tag } });
+    }
+
     render() {
         const post = this.props.data.markdownRemark;
         const siteTitle = this.props.data.site.siteMetadata.title;
@@ -27,10 +36,10 @@ class BlogPostTemplate extends React.Component {
                 <ContentStyles>
                     <h2 className="title">{post.frontmatter.title}</h2>
                     <p className="date">{post.frontmatter.date}</p>
-                    {/* {post.frontmatter.tags.map(tag => (
-                        <Tag text={tag} />
-                    ))} */}
-                    <TagList tags={post.frontmatter.tags} />
+                    <TagList
+                        onTagClick={this.handleTagClick}
+                        tags={post.frontmatter.tags}
+                    />
                     <GradientBar reverse />
                     <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 </ContentStyles>
