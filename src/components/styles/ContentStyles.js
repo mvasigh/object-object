@@ -17,6 +17,7 @@ const ContentStyles = styled.div`
     h2 {
         font-family: 'IBM Plex Mono', sans-serif;
         font-size: 1.6rem;
+        letter-spacing: -1px;
         font-weight: 500;
         color: ${({ theme }) => theme.primary};
     }
@@ -27,9 +28,8 @@ const ContentStyles = styled.div`
     }
 
     h2.title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 700;
-        letter-spacing: -1px;
         line-height: 1.3;
         margin-bottom: 0.4rem;
         color: ${({ theme }) => theme.dark};
