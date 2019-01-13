@@ -55,6 +55,15 @@ const ContentStyles = styled.div`
         margin-bottom: 0.8rem;
     }
 
+    p code {
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 500;
+        font-size: 0.9rem;
+        padding: 0.2rem 0.4rem;
+        background-color: #eee;
+        color: ${({ theme }) => theme.dark};
+    }
+
     pre {
         margin-bottom: 1.8rem;
         font-size: 0.9rem;
