@@ -28,13 +28,7 @@
         "react-typography": "^0.16.13",
         "styled-components": "^4.1.2",
         "typeface-ibm-plex-mono": "0.0.61",
-        "typeface-ibm-plex-sans": "0.0.61",
-        "typeface-merriweather": "0.0.43",
-        "typeface-montserrat": "0.0.43",
-        "typeface-oswald": "0.0.54",
-        "typography": "^0.16.17",
-        "typography-theme-elk-glen": "^0.16.18",
-        "typography-theme-wordpress-2016": "^0.15.10"
+        "typeface-ibm-plex-sans": "0.0.61"
     },
     "devDependencies": {
         "eslint": "^4.19.1",
@@ -42,7 +36,7 @@
         "gh-pages": "^1.2.0",
         "prettier": "^1.14.2"
     },
-    "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+    "homepage": "https://github.com/mvasigh/blog",
     "keywords": [
         "gatsby",
         "gatsby-starter-blog"
@@ -51,7 +45,7 @@
     "main": "n/a",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+        "url": "git+https://github.com/mvasigh/blog.git"
     },
     "scripts": {
         "dev": "gatsby develop",
